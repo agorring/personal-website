@@ -17,6 +17,9 @@
       },
       "api": {
         "personalwebsite": {}
+      },
+      "storage": {
+        "imagestorage": {}
       }
     }
   }
