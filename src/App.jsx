@@ -3,12 +3,12 @@ import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
 import { v4 as uuidv4 } from 'uuid';
 import { Amplify } from 'aws-amplify';
-import { uploadData, getUrl } from 'aws-amplify/storage';
+import { uploadData, getUrl, remove } from 'aws-amplify/storage';
 import { generateClient } from 'aws-amplify/api';
 import config from './amplifyconfiguration.json';
 Amplify.configure(config);
 
-import { createNote, updateNote, deleteNote } from './graphql/mutations';
+import { createNote, updateNote, deleteNote as deleteNoteMutation } from './graphql/mutations';
 import { listNotes } from './graphql/queries';
 import {
   Button,
@@ -109,7 +109,6 @@ const App = ({ signOut }) => {
                 validateObjectExistence: true // defaults to false
               }
             });
-            console.log(url)
             note.image = url; // Update the note's image property
           }
           return note;
@@ -150,13 +149,20 @@ const App = ({ signOut }) => {
     }
   }
   
-  async function deleteNote({ id }) {
-    const newNotes = notes.filter((note) => note.id !== id);
+  async function deleteNote( thisNote ) {
+    const newNotes = notes.filter((note) => note.id !== thisNote.id);
     setNotes(newNotes);
-    await client.graphql({
-      query: deleteNote,
-      variables: { input: { id } },
-    });
+    try {
+      // Remove image by passing the filename of the S3 object
+      await remove({ key: thisNote.image.url.pathname.replace(/^\/public\//, '')});
+      //Remove the note from the database
+      await client.graphql({
+        query: deleteNoteMutation,
+        variables: { input: {id: thisNote.id} },
+      });
+    } catch (error) {
+      console.log('Error ', error);
+    }
   }
 
   return (
