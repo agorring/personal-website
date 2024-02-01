@@ -7,10 +7,10 @@ const RootLayout = () => {
     <Authenticator>
       {({ signOut, user }) => {
         return (
-          <div className="w-full md:flex">
-            <LeftSidebar />
+          <div className="w-full flex">
+            <LeftSidebar className="flex-1" />
 
-            <section className="flex flex-1 h-full">
+            <section className="flex flex-1 items-center justify-center h-full">
               <Outlet />
             </section>
           </div>

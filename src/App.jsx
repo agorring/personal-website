@@ -1,9 +1,10 @@
 import { Amplify } from "aws-amplify";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "@aws-amplify/ui-react/styles.css";
-import { PublicPage } from "./pages/PublicPage";
-import { ProtectedPage } from "./pages/ProtectedPage";
 import RootLayout from "./root/RootLayout";
+import Home from "./pages/Home";
+import Stocks from "./pages/Stocks";
+import News from "./pages/News";
 
 Amplify.configure({
   Auth: {
@@ -16,21 +17,13 @@ Amplify.configure({
 
 export default function App() {
   return (
-    <main className="flex h-screen">
+    <main className="flex h-screen w-screen bg-black">
       <Routes>
-        {/* <Route index element={<PublicPage />} /> */}
-        {/* <Route path="/protected" element={<ProtectedPage />} /> */}
         <Route element={<RootLayout />}>
-          <Route index element={<PublicPage />} />
-          <Route path="/protected" element={<ProtectedPage />} />
-          {/* <Route path="/explore" element={<Explore />} />
-          <Route path="/saved" element={<Saved />} />
-          <Route path="/all-users" element={<AllUsers />} />
-          <Route path="/create-post" element={<CreatePost />} />
-          <Route path="/update-post/:id" element={<EditPost />} />
-          <Route path="/posts/:id" element={<PostDetails />} />
-          <Route path="/profile/:id/*" element={<Profile />} />
-          <Route path="/update-profile/:id" element={<UpdateProfile />} /> */}
+          <Route index element={<Home />} />
+          <Route path="/stocks" element={<Stocks />} />
+          <Route path="/news" element={<News />} />
+          {/* <Route path="/update-post/:id" element={<EditPost />} /> */}
         </Route>
       </Routes>
     </main>
