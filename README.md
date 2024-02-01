@@ -1,3 +1,5 @@
 # Personal Website
 
-This is a perosnal project built using React + Tailwind CSS and deployed with AWS Amplify.
+This is a personal project built for practice/exploration/exhibition.
+ 
+Using React, Tailwind CSS, ShadCN UI components. Deployed with AWS Amplify. Link will be provided soon.
