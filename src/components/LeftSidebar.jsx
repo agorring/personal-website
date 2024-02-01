@@ -1,8 +1,11 @@
 import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import "../styles.css";
+import { useAuthenticator } from "@aws-amplify/ui-react";
 
 const LeftSidebar = () => {
+  const { user, signOut } = useAuthenticator((context) => [context.user]);
+
   return (
     <NavigationMenu.Root orientation="vertical" className="LeftSidebar">
       <NavigationMenu.List>
@@ -49,6 +52,15 @@ const LeftSidebar = () => {
           <NavigationMenu.Content className="NavigationMenuContent">
             {/* Content for Item 5 */}
           </NavigationMenu.Content>
+        </NavigationMenu.Item>
+
+        <NavigationMenu.Item>
+          <NavigationMenu.Link
+            onSelect={signOut} // Attach the function to the onSelect prop
+            className="NavigationMenuTrigger"
+          >
+            Sign out
+          </NavigationMenu.Link>
         </NavigationMenu.Item>
       </NavigationMenu.List>
     </NavigationMenu.Root>

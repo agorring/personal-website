@@ -1,4 +1,3 @@
-import { Authenticator } from "@aws-amplify/ui-react";
 import { Routes, Link, useMatch, Route } from "react-router-dom";
 
 export const ProtectedPage = () => {
@@ -13,20 +12,10 @@ export const ProtectedPage = () => {
   }
 
   return (
-    <Authenticator>
-      {({ signOut, user }) => {
-        return (
-          <div>
-            <div>
-              <button onClick={signOut}>Sign out</button>
-            </div>
-            <h3>Protected Page</h3>
-            <div>
-              <span>Hi, {user.username}</span>
-            </div>
-          </div>
-        );
-      }}
-    </Authenticator>
+    <div>
+      <div>{/* <button onClick={signOut}>Sign out</button> */}</div>
+      <h3>Protected Page</h3>
+      <div>{/* <span>Hi, {user.username}</span> */}</div>
+    </div>
   );
 };
