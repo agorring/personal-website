@@ -4,8 +4,8 @@ import "@aws-amplify/ui-react/styles.css";
 import RootLayout from "./root/RootLayout";
 import Home from "./pages/Home";
 import Stocks from "./pages/Stocks";
-import News from "./pages/News";
-
+import Resume from "./pages/Resume";
+import Projects from "./pages/Projects";
 Amplify.configure({
   Auth: {
     Cognito: {
@@ -17,12 +17,13 @@ Amplify.configure({
 
 export default function App() {
   return (
-    <main className="flex h-screen w-screen bg-black">
+    <main className="flex h-screen w-screen">
       <Routes>
         <Route element={<RootLayout />}>
           <Route index element={<Home />} />
           <Route path="/stocks" element={<Stocks />} />
-          <Route path="/news" element={<News />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/projects" element={<Projects />} />
           {/* <Route path="/update-post/:id" element={<EditPost />} /> */}
         </Route>
       </Routes>

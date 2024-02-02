@@ -10,6 +10,11 @@ export const sidebarLinks = [
     label: "Resume",
   },
   {
+    imgURL: "src/assets/projects.svg",
+    route: "/projects",
+    label: "Projects",
+  },
+  {
     imgURL: "src/assets/stocks.svg",
     route: "/stocks",
     label: "Stock Explorer",
