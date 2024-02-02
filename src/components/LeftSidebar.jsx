@@ -10,7 +10,10 @@ const LeftSidebar = () => {
   const { user, signOut } = useAuthenticator((context) => [context.user]);
 
   return (
-    <NavigationMenu.Root orientation="vertical" className="h-full ml-10 mt-10">
+    <NavigationMenu.Root
+      orientation="vertical"
+      className="h-full ml-10 mt-10 pr-10"
+    >
       <NavigationMenu.List className="flex flex-col gap-5">
         <NavigationMenu.Item className="">
           <NavigationMenu.Link className="rounded font-bold text-3xl text-white">
@@ -27,7 +30,9 @@ const LeftSidebar = () => {
               {({ isActive, isPending, isTransitioning }) => (
                 <div
                   className={`${
-                    isActive ? "text-white bg-neutral-800" : ""
+                    isActive
+                      ? "text-white font-extrabold bg-zinc-900"
+                      : "text-neutral-500 hover:text-neutral-400"
                   } font-semibold flex gap-5 items-center pl-3 py-3 rounded-lg`}
                 >
                   <img src={link.imgURL} />
