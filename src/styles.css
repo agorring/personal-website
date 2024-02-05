@@ -42,3 +42,11 @@
     height: 0;
   }
 }
+
+.SeparatorRoot {
+  background-color: #404040;
+}
+.SeparatorRoot[data-orientation="horizontal"] {
+  height: 1px;
+  width: 100%;
+}
