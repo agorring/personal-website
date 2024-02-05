@@ -12,12 +12,12 @@ const LeftSidebar = () => {
   return (
     <NavigationMenu.Root
       orientation="vertical"
-      className="h-full ml-10 mt-10 pr-10"
+      className="h-full ml-10 mt-10 pr-20"
     >
       <NavigationMenu.List className="flex flex-col gap-5">
         <NavigationMenu.Item className="">
           <NavigationMenu.Link className="rounded font-bold text-3xl text-white">
-            <div className="flex gap-5 items-center mb-10">
+            <div className="flex gap-5 items-center mb-10 pl-3">
               <img src={"src/assets/logo.svg"} />
               a.m.gorring
             </div>
