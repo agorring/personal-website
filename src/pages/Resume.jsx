@@ -27,7 +27,7 @@ const Resume = () => {
               width={80}
               height={80}
               className="rounded-full mr-10 bg-emerald-500 shadow-lg shadow-emerald-500 ring-2 ring-emerald-300 ring-offset-2 ring-offset-emerald-100"
-              src="src/assets/avatar.jpeg"
+              src="https://personalwebsite110913-staging.s3.ap-southeast-2.amazonaws.com/public/avatar.jpeg?AWSAccessKeyId=ASIARX2BCSZ7LBHTYHRL&Expires=1707392178&Signature=rqxOemYk2ICUbV8mk78SPhR9M0o%3D&x-amz-security-token=IQoJb3JpZ2luX2VjECMaDmFwLXNvdXRoZWFzdC0yIkYwRAIgAf2F0HlbRAGGGWpENQ%2B2SXOC4Ps6C5A87xnG2WiPNBcCIHadGnbMHlpVS9SAxalDtBdf3AsnpFXqPmcvV%2BGRjjqtKusECOz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQAhoMMTE5ODU4Njk3ODU0Igy%2Fnb%2F2G8fShHLRJDYqvwSd1xxOmjTYw0wKxsHGRL5ZP3uvrxfuscn5Bqvuw3d9qX1Ha22P959Kj5K9W255r55k1smgyaNpwEwMOa9fTVSp9FugcC8eQuH6KCwYCEo547ogoic01oC2CsxEoJR1piOKRR7DsTEfxS%2BUriwUZ7daQkq1exB%2BHUUvqagDhibA38xWvQgIGe2MneW7mEW0mX2iFn2ZQTmxMv4SkmqVphwC%2BVMfC4nz2ENxNVISRuHjQ1z9geFACbwl3eBfb6SJMIRIUr0ZQQLYJ%2FORTP543zA8IfuctsI4BlrWgSxEApgfBBCElrAE%2B5iIz%2BVsRXQYXUR3JJcdeOPJYsyHrz6aoil6hdhmVYe7H3aFt%2B6t1GJmgb7IKg0Rqk3JYDwcxsQ%2B%2Fi2kTnn1%2B%2FgMR45gtiLktqZ1GSfeCTB9IvdvLi3vbcdLstHgh7lK%2BCfxdTIZ3Hv5rhiGXc8Mwp2aP4ijScJcxSHvbEnR0vB%2BYcoB42XQp2vhUW2DH7x04BYSf1mF2yBke4I6Hitzy1ReWQsU2VuyWFkyf3n9Loq1z0FEBwWdTuzqsCEmLnTT%2FdqZIcHknAJ%2FC%2FY%2FLEN9po08EJs6fOgAixkf%2BuYuPS%2BZAgGWhmwBBcunqhIoiCqkj2efWhfGNl%2FZZB0p7OKbs28qOKYdyLDPjcpH7Z%2FSe2zvO2t4Sg012eXKp9p6vPPoKeNibP3bjyP3rLjTrD7YO5LcmY2vrfrk7IiL251WwdmEj7W%2FfebXZmP%2BLSvQvCoXgiK%2BH8k%2FvpJ%2FxjCo45KuBjqGAg2i3Pz8yaxQ06ceISSt%2F31DnFUGgxGOjSCz5AF3H6ploTqHFpAXXvatGrvsYUdoEHMv%2FODneSDI71F6qoEPGRbM6egzXInQ8K7jEOXmz1w0NZHjLPPAEgsZ%2BSuMSlT6Rcp%2F36CypEqAihZ3drbDSQhsFgowUp5953FHc5VfRW2REgNl03PgKjqaGwIHSQjoQ0P9facPSAU01EHWoi1QvIFihlsrn52B2GpOxyXVhkmFx6yVmSl26Zc97mOtfCdl5bbibv%2Bl60DUOkp1HyTXJ1zBoX0589nIYdvtfcGgRmPzZY9G0HtT4PqqbPVsQJHUOqZovRGim8KuWYCsb0IeNimAovUFPRQ%3D"
             />
           </div>
           <div>
@@ -300,7 +300,7 @@ const Resume = () => {
             <h2 className="mt-10 font-semibold text-xl text-neutral-400">
               About
             </h2>
-            <h3 className="mt-3 font-normal text-neutral-300">
+            <h3 className="mt-3 font-normal text-neutral-200">
               Dedicated tech enthusiast. Passionate for software, hardware, and
               design. Skilled in a variety of programming languages.
             </h3>
@@ -309,17 +309,21 @@ const Resume = () => {
             </h2>
             <div className="mt-5 flex items-center gap-1">
               <DotFilledIcon />
-              <h3 className="font-normal">
+              <h3 className="font-normal text-neutral-200">
                 Reading - history, philosophy, fantasy
               </h3>
             </div>
             <div className="mt-5 flex items-center gap-1">
               <DotFilledIcon />
-              <h3 className="font-normal">Guitar - rock and folk music</h3>
+              <h3 className="font-normal text-neutral-200">
+                Guitar - rock and folk music
+              </h3>
             </div>
             <div className="mt-5 flex items-center gap-1">
               <DotFilledIcon />
-              <h3 className="font-normal">Stock markets and analysis</h3>
+              <h3 className="font-normal text-neutral-200">
+                Stock markets and analysis
+              </h3>
             </div>
             <h2 className="mt-20 font-semibold text-xl text-neutral-400">
               Contact

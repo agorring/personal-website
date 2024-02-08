@@ -4,6 +4,7 @@ import "../styles.css";
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import { sidebarLinks } from "../constants/index";
 import { NavLink } from "react-router-dom";
+import { LogoIcon } from "./vectors/vectors";
 
 const LeftSidebar = () => {
   const { user, signOut } = useAuthenticator((context) => [context.user]);
@@ -17,7 +18,7 @@ const LeftSidebar = () => {
         <NavigationMenu.Item className="">
           <NavigationMenu.Link className="rounded font-bold text-3xl text-white">
             <div className="flex gap-5 items-center mb-10 pl-3">
-              <img src={"src/assets/logo.svg"} />
+              <LogoIcon />
               a.m.gorring
             </div>
           </NavigationMenu.Link>
