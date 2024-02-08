@@ -583,20 +583,12 @@ export const StockIcon = ({ fill }) => (
 );
 
 export const LogoIcon = () => (
-  <svg
-    width="40"
-    height="40"
-    viewBox="0 0 20 20"
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    fill="#ffffff"
-  >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+  <svg width="40" height="40" viewBox="0 0 20 20" version="1.1" fill="#ffffff">
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     ></g>
     <g id="SVGRepo_iconCarrier">
       {" "}
@@ -605,9 +597,9 @@ export const LogoIcon = () => (
       <g
         id="Page-1"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         {" "}
         <g
