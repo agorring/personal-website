@@ -1,7 +1,7 @@
 import React from "react";
 
 const Stocks = () => {
-  return <div>Stocks</div>;
+  return <div>Stock explorer under construction...</div>;
 };
 
 export default Stocks;

@@ -3,7 +3,6 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import "../styles.css";
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import { sidebarLinks } from "../constants/index";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 const LeftSidebar = () => {
@@ -44,24 +43,6 @@ const LeftSidebar = () => {
             </NavLink>
           </NavigationMenu.Item>
         ))}
-
-        {/* <NavigationMenu.Item className="NavigationMenuItem">
-          <NavLink
-            to="/profile" // Update with the correct path
-            className={({ isActive, isPending, isTransitioning }) =>
-              [
-                isPending ? "pending" : "",
-                isActive ? "active" : "",
-                isTransitioning ? "transitioning" : "",
-              ].join(" ")
-            }
-          >
-            <div className="flex gap-5 items-center">
-              <img src={"src/assets/profile.svg"} alt="Profile" />
-              <p>Profile</p>
-            </div>
-          </NavLink>
-        </NavigationMenu.Item> */}
       </NavigationMenu.List>
     </NavigationMenu.Root>
   );
