@@ -2,7 +2,21 @@ import {
   HTMLCSSIcon,
   JavaIcon,
   ReactIcon,
+  NodeIcon,
+  AWSIcon,
+  TypeScriptIcon,
   SwiftIcon,
+  CPlusPlusIcon,
+  PythonIcon,
+  GitIcon,
+  GitHubIcon,
+  VSCodeIcon,
+  KotlinIcon,
+  LinuxIcon,
+  SQLIcon,
+  DynamoIcon,
+  MongoIcon,
+  GraphQLIcon,
 } from "../components/vectors/vectors";
 
 export const languages = [
@@ -17,7 +31,18 @@ export const languages = [
         name: "React.js",
         icon: <ReactIcon />,
       },
-      // Add more languages as needed
+      {
+        name: "Node.js",
+        icon: <NodeIcon />,
+      },
+      {
+        name: "AWS",
+        icon: <AWSIcon />,
+      },
+      {
+        name: "TypeScript",
+        icon: <TypeScriptIcon />,
+      },
     ],
   },
   {
@@ -31,35 +56,60 @@ export const languages = [
         name: "Java",
         icon: <JavaIcon />,
       },
-      // Add more languages as needed
+      {
+        name: "C++",
+        icon: <CPlusPlusIcon />,
+      },
+      {
+        name: "Python",
+        icon: <PythonIcon />,
+      },
+      {
+        name: "Kotlin",
+        icon: <KotlinIcon />,
+      },
     ],
   },
   {
-    category: "Test 3",
+    category: "Tools and Systems",
     languages: [
       {
-        name: "Swift",
-        icon: <SwiftIcon />,
+        name: "Git",
+        icon: <GitIcon />,
       },
       {
-        name: "Java",
-        icon: <JavaIcon />,
+        name: "GitHub",
+        icon: <GitHubIcon />,
       },
-      // Add more languages as needed
+      {
+        name: "VSCode",
+        icon: <VSCodeIcon />,
+      },
+      {
+        name: "Linux",
+        icon: <LinuxIcon />,
+      },
     ],
   },
   {
-    category: "Test 4",
+    category: "Data",
     languages: [
       {
-        name: "Swift",
-        icon: <SwiftIcon />,
+        name: "SQL",
+        icon: <SQLIcon />,
       },
       {
-        name: "Java",
-        icon: <JavaIcon />,
+        name: "DynamoDB",
+        icon: <DynamoIcon />,
       },
-      // Add more languages as needed
+      {
+        name: "MongoDB",
+        icon: <MongoIcon />,
+      },
+      {
+        name: "GraphQL",
+        icon: <GraphQLIcon />,
+      },
     ],
   },
 ];

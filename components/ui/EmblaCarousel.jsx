@@ -1,81 +1,19 @@
-// import React, { useCallback } from "react";
-// import useEmblaCarousel from "embla-carousel-react";
-// import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
-// import Autoplay from "embla-carousel-autoplay";
-// import languageByIndex from "@/src/constants/languagesByIndex";
-
-// const EmblaCarousel = (props) => {
-//   const { slides, options } = props;
-//   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
-
-//   const onButtonClick = useCallback((emblaApi) => {
-//     const { autoplay } = emblaApi.plugins();
-//     if (!autoplay) return;
-//     if (autoplay.options.stopOnInteraction !== false) autoplay.stop();
-//   }, []);
-
-//   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
-//     emblaApi,
-//     onButtonClick
-//   );
-
-//   return (
-//     <div className="embla">
-//       <div className="embla__viewport" ref={emblaRef}>
-//         <div className="embla__container">
-//           {slides.map((index) => (
-//             <div className="embla__slide" key={index}>
-//               <div className="embla__slide__number">
-//                 <span>{index + 1}</span>
-//               </div>
-
-//               <h2 className="mt-10 mb-5 font-semibold text-xl">
-//                 {languageByIndex(index).category}
-//               </h2>
-//               <div className="flex gap-10">
-//                 {languageByIndex(index).languages.map((language) => (
-//                   <div className="flex flex-col items-center">
-//                     {language.icon}
-//                     <p>{language.name}</p>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-
-//       <div className="embla__dots">
-//         {scrollSnaps.map((_, index) => (
-//           <DotButton
-//             key={index}
-//             onClick={() => onDotButtonClick(index)}
-//             className={"embla__dot".concat(
-//               index === selectedIndex ? " embla__dot--selected" : ""
-//             )}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EmblaCarousel;
-
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { flushSync } from "react-dom";
 import languageByIndex from "@/src/constants/languagesByIndex";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import Autoplay from "embla-carousel-autoplay";
 
-const TWEEN_FACTOR = 4.2;
+const TWEEN_FACTOR = 3;
 
 const numberWithinRange = (number, min, max) =>
   Math.min(Math.max(number, min), max);
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const loopedOptions = { ...options, loop: true };
+  const [emblaRef, emblaApi] = useEmblaCarousel(loopedOptions, [Autoplay()]);
   const [tweenValues, setTweenValues] = useState([]);
 
   const onButtonClick = useCallback((emblaApi) => {
@@ -137,16 +75,7 @@ const EmblaCarousel = (props) => {
                   ...(tweenValues.length && { opacity: tweenValues[index] }),
                 }}
               >
-                <div className="flex justify-center">
-                  <h2 className="mt-10 mb-5 font-semibold text-xl align-middle items-center justify-center">
-                    {languageByIndex(index).category}
-                  </h2>
-                </div>
-                {/* <div className="embla__slide__number">
-                <span>{index + 1}</span>
-              </div> */}
-
-                <div className="flex gap-10 justify-center">
+                <div className="flex gap-10 mt-10 justify-center">
                   {languageByIndex(index).languages.map((language) => (
                     <div
                       className="flex flex-col items-center"
@@ -157,12 +86,17 @@ const EmblaCarousel = (props) => {
                     </div>
                   ))}
                 </div>
+                <div className=" flex justify-center">
+                  <h2 className="mt-10 font-semibold text-xl">
+                    {languageByIndex(index).category}
+                  </h2>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className="embla__dots">
+      <div className="embla__dots mt-10">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
