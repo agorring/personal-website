@@ -5,7 +5,7 @@ import languageByIndex from "@/src/constants/languagesByIndex";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import Autoplay from "embla-carousel-autoplay";
 
-const TWEEN_FACTOR = 3;
+const TWEEN_FACTOR = 5;
 
 const numberWithinRange = (number, min, max) =>
   Math.min(Math.max(number, min), max);

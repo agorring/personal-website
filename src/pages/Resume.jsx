@@ -4,6 +4,7 @@ import {
   ChevronDownIcon,
   ArrowRightIcon,
   VercelLogoIcon,
+  DotFilledIcon,
 } from "@radix-ui/react-icons";
 import "../styles.css";
 import * as Separator from "@radix-ui/react-separator";
@@ -16,23 +17,6 @@ const Resume = () => {
   const OPTIONS = { align: "center", containScroll: "trimSnaps" };
   const SLIDE_COUNT = 4;
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
-
-  // const [ref, springs] = useInView(
-  //   () => ({
-  //     from: {
-  //       opacity: 0,
-  //       transform: "translateY(10%)",
-  //     },
-  //     to: {
-  //       opacity: 1,
-  //       transform: "translateY(0)", // Move to its original position
-  //     },
-  //     config: { tension: 500, friction: 40 },
-  //   }),
-  //   {
-  //     rootMargin: "-30% 0%",
-  //   }
-  // );
 
   return (
     <div className="w-full h-full grid grid-cols-3 gap-20">
@@ -126,7 +110,7 @@ const Resume = () => {
         </div>
 
         <Separator.Root className="SeparatorRoot mt-10" />
-        <FadeIn>
+        <FadeIn direction={"right"}>
           <div className="mt-20">
             <h2 className="font-semibold text-xl text-neutral-500">
               Experience
@@ -184,7 +168,7 @@ const Resume = () => {
           <Separator.Root className="SeparatorRoot mt-10" />
         </FadeIn>
 
-        <FadeIn>
+        <FadeIn direction={"right"}>
           <div className="mt-20">
             <h2 className="font-semibold text-xl text-neutral-500">
               Passions and Projects
@@ -263,7 +247,7 @@ const Resume = () => {
           <Separator.Root className="SeparatorRoot mt-10" />
         </FadeIn>
 
-        <FadeIn>
+        <FadeIn direction={"right"}>
           <div className="mt-20">
             <h2 className="font-semibold text-xl text-neutral-500">Awards</h2>
 
@@ -310,9 +294,47 @@ const Resume = () => {
         </FadeIn>
       </div>
 
-      <div className="col-span-1 p-4 mt-10 border-l border-neutral-800">
-        About
-      </div>
+      <FadeIn direction={"right"} className="flex">
+        <div className="h-full col-span-1 p-4 border-l border-neutral-800 bg-neutral-900">
+          <div className="mt-10 ml-10 mr-5">
+            <h2 className="mt-10 font-semibold text-xl text-neutral-400">
+              About
+            </h2>
+            <h3 className="mt-3 font-normal text-neutral-300">
+              Dedicated tech enthusiast. Passionate for software, hardware, and
+              design. Skilled in a variety of programming languages.
+            </h3>
+            <h2 className="mt-20 font-semibold text-xl text-neutral-400">
+              Interests
+            </h2>
+            <div className="mt-5 flex items-center gap-1">
+              <DotFilledIcon />
+              <h3 className="font-normal">
+                Reading - history, philosophy, fantasy
+              </h3>
+            </div>
+            <div className="mt-5 flex items-center gap-1">
+              <DotFilledIcon />
+              <h3 className="font-normal">Guitar - rock and folk music</h3>
+            </div>
+            <div className="mt-5 flex items-center gap-1">
+              <DotFilledIcon />
+              <h3 className="font-normal">Stock markets and analysis</h3>
+            </div>
+            <h2 className="mt-20 font-semibold text-xl text-neutral-400">
+              Contact
+            </h2>
+            <div className="mt-5 ml-1 flex items-center gap-1">
+              <h3 className="font-medium">Email</h3>
+              <ArrowRightIcon />
+            </div>
+            <div className="mt-5 ml-1 flex items-center gap-1">
+              <h3 className="font-medium">GitHub</h3>
+              <ArrowRightIcon />
+            </div>
+          </div>
+        </div>
+      </FadeIn>
     </div>
   );
 };
