@@ -511,3 +511,73 @@ export const GraphQLIcon = () => (
     </g>
   </svg>
 );
+
+export const HomeIcon = ({ fill }) => (
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff">
+    <g strokeLinecap="round" strokeLinejoin="round" />
+    <g>
+      <path
+        d="M19.0167 7.1419C19.6261 7.50161 20 8.15658 20 8.86423V18.0001C20 19.1047 19.1046 20.0001 18 20.0001H16C14.8954 20.0001 14 19.1047 14 18.0001V14C14 12.8955 13.1046 12 12 12V12C10.8954 12 10 12.8955 10 14V18.0001C10 19.1047 9.10457 20.0001 8 20.0001H6C4.89543 20.0001 4 19.1047 4 18.0001V8.86423C4 8.15658 4.37395 7.50161 4.98335 7.1419L10.9833 3.60023C11.6106 3.23 12.3894 3.23 13.0167 3.60023L19.0167 7.1419Z"
+        stroke={fill}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+  </svg>
+);
+
+export const ResumeIcon = ({ fill }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" width={40}>
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      <path
+        d="M3 15H21M3 19H15M3 7H11M3 11H11M19.4 11H16.6C16.0399 11 15.7599 11 15.546 10.891C15.3578 10.7951 15.2049 10.6422 15.109 10.454C15 10.2401 15 9.96005 15 9.4V6.6C15 6.03995 15 5.75992 15.109 5.54601C15.2049 5.35785 15.3578 5.20487 15.546 5.10899C15.7599 5 16.0399 5 16.6 5H19.4C19.9601 5 20.2401 5 20.454 5.10899C20.6422 5.20487 20.7951 5.35785 20.891 5.54601C21 5.75992 21 6.03995 21 6.6V9.4C21 9.96005 21 10.2401 20.891 10.454C20.7951 10.6422 20.6422 10.7951 20.454 10.891C20.2401 11 19.9601 11 19.4 11Z"
+        stroke={fill}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>
+    </g>
+  </svg>
+);
+
+export const ProjectsIcon = ({ fill }) => (
+  <svg width="40" height="40" viewBox="0 0 24 24">
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      <path
+        d="M19 10V6C19 5.44772 18.5523 5 18 5H10.0351C9.73195 5 9.44513 4.86245 9.25533 4.62602L8.25023 3.37398C8.06042 3.13755 7.77361 3 7.47042 3H3C2.44772 3 2 3.44772 2 4L2 15C2 15.5523 2.44772 16 3 16H5"
+        stroke={fill}
+        strokeWidth="2"
+      ></path>
+      <path
+        d="M5 20V9C5 8.44772 5.44772 8 6 8H10.4704C10.7736 8 11.0604 8.13755 11.2502 8.37398L12.2553 9.62602C12.4451 9.86245 12.7319 10 13.0351 10H21C21.5523 10 22 10.4477 22 11V20C22 20.5523 21.5523 21 21 21H6C5.44772 21 5 20.5523 5 20Z"
+        stroke={fill}
+        strokeWidth="2"
+      ></path>
+    </g>
+  </svg>
+);
+export const StockIcon = ({ fill }) => (
+  <svg width="40" height="40" viewBox="0 0 24 24">
+    <g strokeLinecap="round" strokeLinejoin="round" />
+    <g>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M5 5C5 4.44772 4.55228 4 4 4C3.44772 4 3 4.44772 3 5L3 13.9998C3 13.9999 3 14.0001 3 14.0002V19C3 19.5523 3.44772 20 4 20H20C20.5523 20 21 19.5523 21 19C21 18.4477 20.5523 18 20 18H5V14.4142L9 10.4142L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071L19 8.41421V11C19 11.5523 19.4477 12 20 12C20.5523 12 21 11.5523 21 11V6C21 5.44772 20.5523 5 20 5H15C14.4477 5 14 5.44772 14 6C14 6.55228 14.4477 7 15 7H17.5858L13 11.5858L9.70711 8.29289C9.31658 7.90237 8.68342 7.90237 8.29289 8.29289L5 11.5858V5Z"
+        fill={fill}
+      />
+    </g>
+  </svg>
+);

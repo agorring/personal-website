@@ -1,21 +1,29 @@
+import React from "react";
+import {
+  HomeIcon,
+  ResumeIcon,
+  ProjectsIcon,
+  StockIcon,
+} from "../components/vectors/vectors";
+
 export const sidebarLinks = [
   {
-    imgURL: "src/assets/home.svg",
+    icon: <HomeIcon />,
     route: "/",
     label: "Home",
   },
   {
-    imgURL: "src/assets/resume.svg",
+    icon: <ResumeIcon />,
     route: "/resume",
     label: "Resume",
   },
   {
-    imgURL: "src/assets/projects.svg",
+    icon: <ProjectsIcon />,
     route: "/projects",
     label: "Projects",
   },
   {
-    imgURL: "src/assets/stocks.svg",
+    icon: <StockIcon />,
     route: "/stocks",
     label: "Stock Explorer",
   },

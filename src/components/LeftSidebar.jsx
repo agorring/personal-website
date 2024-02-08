@@ -2,7 +2,7 @@ import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import "../styles.css";
 import { useAuthenticator } from "@aws-amplify/ui-react";
-import { sidebarLinks } from "../constants";
+import { sidebarLinks } from "../constants/index";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
@@ -35,7 +35,9 @@ const LeftSidebar = () => {
                       : "text-neutral-500 hover:text-neutral-400"
                   } font-semibold flex gap-5 items-center pl-3 py-3 rounded-lg`}
                 >
-                  <img src={link.imgURL} />
+                  {React.cloneElement(link.icon, {
+                    fill: isActive ? "white" : "#737373",
+                  })}
                   {link.label}
                 </div>
               )}
